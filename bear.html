@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alien Hunterr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Cherry+Bomb+One&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bear.css" />
+  </head>
+
+  <body>
+
+    <div class="game-container">
+      <div class="title">
+        <span class="lightning">👾</span>
+        CATCH ME IF YOU CAN !
+        <span class="lightning">⚡</span>
+      </div>
+
+      <div class="stats">
+        <div class="stat-box">
+          <div class="stat-label">SCORE</div>
+          <div class="stat-value" id="score">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">TIME</div>
+          <div class="stat-value" id="timer">0</div>
+        </div>
+      </div>
+
+      <div class="game-board">
+        <div class="hole" data-index="0">
+          <div class="alien">
+            <div class="alien-ears">
+              <div class="ear left"></div>
+              <div class="ear right"></div>
+            </div>
+            <div class="alien-body">
+              <div class="alien-face">
+                <div class="alien-eyes">
+                  <div class="eye"></div>
+                  <div class="eye"></div>
+                </div>
+                <div class="alien-nose"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hole" data-index="1">
+          <div class="alien">
+            <div class="alien-ears">
+              <div class="ear left"></div>
+              <div class="ear right"></div>
+            </div>
+            <div class="alien-body">
+              <div class="alien-face">
+                <div class="alien-eyes">
+                  <div class="eye"></div>
+                  <div class="eye"></div>
+                </div>
+                <div class="alien-nose"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hole" data-index="2">
+          <div class="alien">
+            <div class="alien-ears">
+              <div class="ear left"></div>
+              <div class="ear right"></div>
+            </div>
+            <div class="alien-body">
+              <div class="alien-face">
+                <div class="alien-eyes">
+                  <div class="eye"></div>
+                  <div class="eye"></div>
+                </div>
+                <div class="alien-nose"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-start" id="startBtn">🎮 Start Game</button>
+        <button class="btn btn-reset" id="resetBtn">🔄 Reset</button>
+      </div>
+    </div>
+
+    <script src="bear.js"></script>
+    
+  </body>
+
+</html>

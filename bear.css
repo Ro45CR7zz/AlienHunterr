@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(45deg, #0c0c0c, #1a1a2e, #16213e, #0f3460);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 110px 100px 120px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  min-width: 1200px;
+}
+
+.title {
+  font-family: "Audiowide", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(
+    45deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #f9ca24,
+    #f0932b
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 70px;
+  margin-top: -30px;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 3.9rem;
+  animation: textShimmer 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(78, 205, 196, 0.3));
+  background-size: 300% 300%;
+}
+
+@keyframes textShimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.lightning {
+  color: #ffff00;
+  font-size: 2.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 90px;
+  font-family: "Audiowide", sans-serif;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 35px 50px;
+  min-width: 100px;
+  backdrop-filter: blur(5px);
+}
+
+.stat-label {
+  color: #888;
+  font-size: 1.9rem;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.hole {
+  width: 200px; 
+  height: 200px;
+  background: radial-gradient(circle, #000, #333);
+  border-radius: 50%;
+  position: relative;
+  border: 3px solid #444;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hole:hover {
+  transform: scale(1.05);
+}
+
+.alien {
+  width: 100px;
+  height: 120px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(150px);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+}
+
+.alien-body {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(145deg, #aaff00, #33ff66, #ccff00);
+  box-shadow: 0 0 20px #00ffcc;
+  border-radius: 50% 50% 45% 45%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border: 5px solid #000000;
+}
+
+.alien-face {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 60px;
+}
+
+.alien-eyes {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  margin: 0 auto 10px;
+}
+
+.eye {
+  width: 18px;
+  height: 18px;
+  background: #000;
+  border-radius: 50%;
+  position: relative;
+  animation: blink 3s infinite;
+}
+
+.eye::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+@keyframes blink {
+  0%,
+  90%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+.alien-nose {
+  width: 12px;
+  height: 8px;
+  background: #000000;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.alien-ears {
+  position: absolute;
+  top: -10px;
+  width: 100%;
+}
+
+.ear {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(145deg, #aaff00, #33ff66, #ccff00);
+  border-radius: 50%;
+  border: 2px solid #00103c;
+}
+
+.ear.left {
+  left: 15px;
+}
+.ear.right {
+  right: 15px;
+}
+
+.alien.up {
+  transform: translate(-50%, -50%) translateY(-10px);
+  opacity: 1;
+  animation: popUp 0.4s ease-out;
+}
+
+@keyframes popUp {
+  0% {
+    transform: translate(-50%, -50%) translateY(150px) scale(0.8);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-50%, -50%) translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-10px) scale(1);
+    opacity: 1;
+  }
+}
+
+.alien.hit {
+  background: #ff4444;
+  animation: hit 0.3s ease;
+}
+
+@keyframes hit {
+  0% {
+    transform: translate(-50%, -50%) translateY(0) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(0) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(100px) scale(1);
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.btn {
+  padding: 29px 60px;
+  border: none;
+  border-radius: 45px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-family: "Audiowide", sans-serif;
+  font-size: 1.5rem;
+}
+
+.btn-start {
+  background: linear-gradient(45deg, #00f260, #0575e6);
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+.btn-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+}
+
+.btn-reset {
+  background: linear-gradient(45deg, #ff874f, #ff3742);
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+.btn-reset:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+

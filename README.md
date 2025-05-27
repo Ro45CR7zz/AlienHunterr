@@ -7,14 +7,14 @@ Shoot down as many aliens as you can before they vanish. Great for quick reflexe
 
 ## 🛠️ Features
 
-- 👽 Randomly appearing aliens (or whatever villain you choose!)
+- 👽 Randomly appearing aliens 
 - 🧠 Score tracking
-- ⏱️ Timer-based gameplay
-- 🎯 Mouse click to "hunt" aliens
+- ⏱️ Timer-based gameplayyy
+- 🎯 Mouse click to "hunttt" the alienss
 
 ---
 
-## 🎮 How to Play
+## 🎮 How to Playy
 
 1. Open the game in your browser.
 2. Wait for the aliens to pop up randomly.

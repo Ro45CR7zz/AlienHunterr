@@ -1,4 +1,4 @@
-# 👾 Alien Hunter
+# 👾 Alienn Hunter
 
 A fun little alien-hunting game inspired by the classic *Whack-a-Mole*! 🚀  
 Shoot down as many aliens as you can before they vanish. Great for quick reflexes and casual fun.

@@ -10,7 +10,7 @@ Shoot down as many aliens as you can before they vanish. Great for quick reflexe
 - 👽 Randomly appearing alienz
 - 🧠 Score tracking
 - ⏱️ Timer-based gameplayy
-- 🎯 Mouse click to "huntt" the alienss
+- 🎯 Mouse click to "huntt" thy alienss
 
 ---
 

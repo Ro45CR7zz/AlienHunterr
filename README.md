@@ -2,7 +2,7 @@
 
 A funny little alien-huntingg game inspired by the classic *Whack-a-Mole*! 🚀  
 Shoot down as many aliens as you can before they vanish. Great for quick reflexes and casual fun.
-
+Have funn!!
 ---
 
 ## 🛠️ Featurez

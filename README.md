@@ -5,7 +5,7 @@ Shoot down as many aliens as you can before they vanish. Great for quick reflexe
 Have funn!!
 ---
 
-## 🛠️ Featurez
+## 🛠️ Featurezvcvcv
 
 - 👽 Randomly appearing alienz
 - 🧠 Score tracking

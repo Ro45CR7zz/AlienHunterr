@@ -32,3 +32,4 @@ To run the game locally:
 
 yeaayyy
 vv
+thkl

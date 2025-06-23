@@ -14,7 +14,7 @@ Have funn!!
 
 ---
 
-## 🎮 How to Playy
+## 🎮 How to Playyzz
 
 1. Open the game in your browser.
 2. Waitt for the aliens to pop up randomlyy.

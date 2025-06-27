@@ -19,7 +19,7 @@ Have funn!!
 1. Open the game in your browser.
 2. Waitt for the aliens to pop up randomlyy.
 3. Click on them as fast as you can before they disappear.
-4. Tryy to beat your high score!
+4. Tryy to beat your high score! yoohu
 
 ---
 ## 🚀 Getting Started
